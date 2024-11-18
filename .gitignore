@@ -1,0 +1,18 @@
+# Django-specific
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+# /static/
+# /media/
+/.env
+
+# Virtual environment
+env/
+
+# PyCharm or other IDEs
+.idea/
+
+# MacOS files
+.DS_Store
