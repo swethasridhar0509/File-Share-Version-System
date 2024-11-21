@@ -1,19 +1,21 @@
 from django.http import JsonResponse 
 
-def files_view(request):
-    message = {"files" : []}
-    return JsonResponse(message)
 
 def file_upload(request):
-    message = {"uploaded" : True}
-    return JsonResponse(message)
-
-def file_view(request, id):
-    message = {"file" : "file", "id" : id}
+    print("request", dir(request))
+    message = {"uploaded" : True,}
     return JsonResponse(message)
 
 def file_version_upload(request, id):
     message = {"new_version" : True}
+    return JsonResponse(message)
+
+def files_view(request):
+    message = {"files" : []}
+    return JsonResponse(message)
+
+def file_view(request, id):
+    message = {"file" : "file", "id" : id}
     return JsonResponse(message)
 
 def file_versions_view(request, id):
@@ -26,4 +28,8 @@ def file_share(request, id):
 
 def file_restore(request, id):
     message = {"restore": True, "id": id}
+    return JsonResponse(message)
+
+def file_delete(request, id):
+    message = {"deleted": True}
     return JsonResponse(message)
